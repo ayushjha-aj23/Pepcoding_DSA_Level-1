@@ -8,15 +8,19 @@ public class Main
 		
 		int n = sc.nextInt();
 		
-		int temp = n;
+		//int temp = n;
 		
-		for(int prime=2;prime<n;prime++)
+		for(int prime=2; prime*prime <=n; prime++)
 		{
-		    while(temp%prime==0)
+		    while(n%prime==0)
 		    {
-		        temp = temp/prime;
+		        n = n/prime;
 		        System.out.print(prime + " ");
 		    }
+		}
+		if(n != 1)
+		{
+		    System.out.println(n);
 		}
 	}
 }
